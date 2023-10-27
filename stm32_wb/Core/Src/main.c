@@ -101,6 +101,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
 		HAL_Delay(10);
+		HAL_Delay(20);
 
     /* USER CODE BEGIN 3 */
   }
