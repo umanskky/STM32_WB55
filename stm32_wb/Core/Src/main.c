@@ -103,6 +103,7 @@ int main(void)
 		HAL_Delay(10);
 		HAL_Delay(20);
 		HAL_Delay(30);
+		HAL_Delay(40);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
