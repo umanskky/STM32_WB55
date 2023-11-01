@@ -429,12 +429,17 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+<<<<<<< HEAD
   __HAL_RCC_GPIOC_CLK_ENABLE();
+=======
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+>>>>>>> 843b8ab6b526b73304fe6bd94df11852586d97a7
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
+<<<<<<< HEAD
   HAL_GPIO_WritePin(GPIOB, LD2_Pin|LD3_Pin|LD1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : B1_Pin */
@@ -445,6 +450,22 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : LD2_Pin LD3_Pin LD1_Pin */
   GPIO_InitStruct.Pin = LD2_Pin|LD3_Pin|LD1_Pin;
+=======
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3|GPIO_PIN_7, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : PA9 */
+  GPIO_InitStruct.Pin = GPIO_PIN_9;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PB3 PB7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_7;
+>>>>>>> 843b8ab6b526b73304fe6bd94df11852586d97a7
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
